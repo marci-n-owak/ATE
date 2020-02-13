@@ -1,0 +1,40 @@
+.stopka {
+  margin-top: 1.5rem !important; 
+}
+.button {
+  background-color: #e95123;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 20px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(207, 7, 7);
+}
+.divTable{
+  text-align: center;
+  display: table;
+  width: 60%;
+  margin: 0 auto;
+}
+.divTableRow {
+  display: table-row;
+}
+.divTableBody {
+  display: table-row-group;
+}
+.divTableCell{
+  border: 1px solid #999999;
+  display: table-cell;
+  padding: 3px 10px;
+  vertical-align: middle;
+}
+.divTableCell input{
+  vertical-align: middle;
+}
