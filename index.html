@@ -56,6 +56,10 @@
         </footer>
     </body>
     <script>
+        function load(){
+            let someData_notJSON = JSON.parse(data);
+            console.log(someData_notJSON[0].red); // Will log "is my fave color"
+        }
         let tablica = new Array(3)
         for (i=0; i < 3; i++){
             tablica[i]=new Array(3)
