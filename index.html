@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
         <title>ATE</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="spis.js"></script>
     </head>
     <body>
         <section id="wraper">
@@ -48,6 +50,8 @@
                 </div>
             </div>
         </section>
+        <div id="output"></div>
+        <div id="output1"></div>
         <footer>
             <hr class="stopka">
             <center>
@@ -56,16 +60,41 @@
         </footer>
     </body>
     <script>
-        function load(){
-            let someData_notJSON = JSON.parse(data);
-            console.log(someData_notJSON[0].red); // Will log "is my fave color"
+        let requestURL = 'https://marci-n-owak.github.io/ATE/spis.json';
+        let spis;
+
+        let request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+            const superHeroes = request.response;
+            spis = request.response;
+            console.log(superHeroes);
         }
-        let tablica = new Array(3)
+        console.log(spis);
+        /*
+        let myJson;
+
+        //let spices =  await import('https://marci-n-owak.github.io/ATE/spis.json')
+        fetch('https://marci-n-owak.github.io/ATE/spis.json')
+            .then(res => res.json())
+            .then(data => {
+                myJson = data;
+                document.getElementById("output").innerHTML = myJson.lektura1;
+            })
+
+        console.log(myJson.lektura1);
+        document.getElementById("output1").innerHTML = myJson.lektura1;
+        */
+
+      /*   let tablica = new Array(3)
         for (i=0; i < 3; i++){
             tablica[i]=new Array(3)
-        }
+        } */
 
-        tablica[0] = ["Sofokles", "Król Edyp", "Antyk"];
+        /* tablica[0] = ["Sofokles", "Król Edyp", "Antyk"];
         tablica[1] = ["Sofokles", "Antygona", "Antyk"];
         tablica[2] = ["Brak", "Narodziny świata", "Antyk"];
         tablica[3] = ["Brak", "Oryfeusz", "Antyk"];
@@ -131,7 +160,7 @@
         tablica[62] = ["Maria Konopnicka", "Rota", "Pozytywizm"];
         tablica[63] = ["Maria Konopnicka", "Mendel Gdański", "Pozytywizm"];
         tablica[64] = ["Bolesław Prus", "Lalka", "Pozytywizm"];
-        tablica[65] = ["Bolesław Prus", "Kroniki Tygodniowe", "Pozytywizm"];
+        tablica[65] = ["Bolesław Prus", "Kroniki Tygodniowe", "Pozytywizm"]; */
 
         let pytanie1 = "";
         let pytanie2 = "";
