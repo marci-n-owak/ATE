@@ -13,6 +13,7 @@
                 <center>
                     <input class="button" type="button" value="Losuj" onclick="wypelnij()">
                     <input class="button" type="button" value="Sprawdź" onclick="sprawdz()">
+                    <input class="button" type="button" value="Uzupełnij" onclick="uzupelnij()">
                 </center>
                 <div class="divTable">
                     <div class="divTableBody">
@@ -194,6 +195,19 @@
             else{
                 document.getElementById("E5").style.backgroundColor = "red";
             }
+        }
+        const uzupelnij = () =>{
+            document.getElementById("A1Text").value = pytanie1[0];
+            document.getElementById("A2Text").value = pytanie2[0];
+            document.getElementById("A3Text").value = pytanie3[0];
+            document.getElementById("A4Text").value = pytanie4[0];
+            document.getElementById("A5Text").value = pytanie5[0];
+            
+            document.getElementById("E1Text").value = pytanie1[2];
+            document.getElementById("E2Text").value = pytanie2[2];
+            document.getElementById("E3Text").value = pytanie3[2];
+            document.getElementById("E4Text").value = pytanie4[2];
+            document.getElementById("E5Text").value = pytanie5[2];
         }
     </script>
 </html>
